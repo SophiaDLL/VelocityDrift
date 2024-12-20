@@ -59,7 +59,7 @@ namespace vMenuClient
         void DumpLanguageTemplate()
         {
             // Just to make sure
-            OriginalLanguage.Remove(Game.Player.Name);
+            OriginalLanguage.Remove("~r~");
             OriginalLanguage.Remove("vMenu");
 
             // Send to the server
@@ -173,14 +173,14 @@ namespace vMenuClient
 
                     if (!OriginalLanguage.ContainsKey(item.ParentMenu.MenuTitle))
                     {
-                        if (!item.ParentMenu.MenuTitle.Equals(Game.Player.Name) && !item.ParentMenu.MenuTitle.Equals("vMenu"))
+                        if (!item.ParentMenu.MenuTitle.Equals("~r~") && !item.ParentMenu.MenuTitle.Equals("vMenu"))
                         {
                             OriginalLanguage.Add(item.ParentMenu.MenuTitle, item.ParentMenu.MenuTitle);
                         }
                     }
                     if (!string.IsNullOrEmpty(item.ParentMenu.MenuSubtitle) && !OriginalLanguage.ContainsKey(item.ParentMenu.MenuSubtitle))
                     {
-                        if (!item.ParentMenu.MenuSubtitle.Equals(Game.Player.Name))
+                        if (!item.ParentMenu.MenuSubtitle.Equals("~r~"))
                         {
                             OriginalLanguage.Add(item.ParentMenu.MenuSubtitle, item.ParentMenu.MenuSubtitle);
                         }

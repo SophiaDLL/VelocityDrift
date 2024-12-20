@@ -651,10 +651,10 @@ namespace vMenuClient
                 NoClipKey = "F2";
             }
             // Create the main menu.
-            Menu = Lm.GetMenu(new Menu(Game.Player.Name, "Main Menu"));
-            PlayerSubmenu = Lm.GetMenu(new Menu(Game.Player.Name, "Player Related Options"));
-            VehicleSubmenu = Lm.GetMenu(new Menu(Game.Player.Name, "Vehicle Related Options"));
-            WorldSubmenu = Lm.GetMenu(new Menu(Game.Player.Name, "World Options"));
+            Menu = Lm.GetMenu(new Menu("~r~", "Main Menu"));
+            PlayerSubmenu = Lm.GetMenu(new Menu("~r~", "Player Related Options"));
+            VehicleSubmenu = Lm.GetMenu(new Menu("~r~", "Vehicle Related Options"));
+            WorldSubmenu = Lm.GetMenu(new Menu("~r~", "World Options"));
 
             // Add the main menu to the menu pool.
             MenuController.AddMenu(Menu);

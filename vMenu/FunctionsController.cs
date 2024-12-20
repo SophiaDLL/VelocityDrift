@@ -2764,8 +2764,8 @@ namespace vMenuClient
             string currentvehicle = GetLabelText(GetDisplayNameFromVehicleModel(model));
 
             Substitutes = Substitutes.Replace("%playercount%", $"{GetActivePlayers().Count}/{GetConvar("sv_maxClients", "48")}");  
-            Substitutes = Substitutes.Replace("%playername%", $"{FilterString()}"); 
-            Substitutes = Substitutes.Replace("%playerid%", $"{Game.Player.ServerId}"); 
+            Substitutes = Substitutes.Replace("%playername%", $"{FilterString(Game.Player.Name)}"); 
+            // Substitutes = Substitutes.Replace("%playerid%", $"{Game.Player.ServerId}"); 
             Substitutes = Substitutes.Replace("%playerstreet%", $"{street}");
             Substitutes = Substitutes.Replace("%pfversion%", $"{MainMenu.Version}");
             Substitutes = Substitutes.Replace("%pfversion%", $"{MainMenu.Version}");

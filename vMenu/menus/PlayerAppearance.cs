@@ -42,11 +42,11 @@ namespace vMenuClient.menus
         private void CreateMenu()
         {
             // Create the menu.
-            menu = new Menu(Game.Player.Name, "Player Appearance");
-            savedPedsMenu = new Menu(Game.Player.Name, "Saved Peds");
-            pedCustomizationMenu = Lm.GetMenu(new Menu(Game.Player.Name, "Customize Saved Ped"));
-            spawnPedsMenu = Lm.GetMenu(new Menu(Game.Player.Name, "Spawn Ped"));
-            addonPedsMenu = new Menu(Game.Player.Name, "Addon Peds");
+            menu = new Menu("~r~", "Player Appearance");
+            savedPedsMenu = new Menu("~r~", "Saved Peds");
+            pedCustomizationMenu = Lm.GetMenu(new Menu("~r~", "Customize Saved Ped"));
+            spawnPedsMenu = Lm.GetMenu(new Menu("~r~", "Spawn Ped"));
+            addonPedsMenu = new Menu("~r~", "Addon Peds");
 
 
             // Add the (submenus) to the menu pool.

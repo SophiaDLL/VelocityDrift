@@ -28,7 +28,7 @@ namespace vMenuClient
         private void CreateMenu()
         {
             // Create the menu
-            menu = new Menu(Game.Player.Name, "Plugins Menu");
+            menu = new Menu("~r~", "Plugins Menu");
 
             MenuItem easydpm = new MenuItem("Easy Drift Plus", "Easy Drift Plus Plugin Controls.")
             {

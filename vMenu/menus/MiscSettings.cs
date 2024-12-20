@@ -93,19 +93,19 @@ namespace vMenuClient.menus
             }
 
             // Create the menu.
-            menu = new Menu(Game.Player.Name, "Misc Settings");
-            teleportOptionsMenu = Lm.GetMenu(new Menu(Game.Player.Name, "Teleport Options"));
-            developerToolsMenu = Lm.GetMenu(new Menu(Game.Player.Name, "Development Tools"));
-            entitySpawnerMenu = Lm.GetMenu(new Menu(Game.Player.Name, "Entity Spawner"));
+            menu = new Menu("~r~", "Misc Settings");
+            teleportOptionsMenu = Lm.GetMenu(new Menu("~r~", "Teleport Options"));
+            developerToolsMenu = Lm.GetMenu(new Menu("~r~", "Development Tools"));
+            entitySpawnerMenu = Lm.GetMenu(new Menu("~r~", "Entity Spawner"));
 
             // teleport menu
-            var teleportMenu = new Menu(Game.Player.Name, "Teleport Locations");
+            var teleportMenu = new Menu("~r~", "Teleport Locations");
             var teleportMenuBtn = new MenuItem("Teleport Locations", "Teleport to pre-configured locations, added by the server owner.");
             MenuController.AddSubmenu(menu, teleportMenu);
             MenuController.BindMenuItem(menu, teleportMenu, teleportMenuBtn);
 
             // keybind settings menu
-            var keybindMenu = Lm.GetMenu(new Menu(Game.Player.Name, "Keybind Settings"));
+            var keybindMenu = Lm.GetMenu(new Menu("~r~", "Keybind Settings"));
             var keybindMenuBtn = new MenuItem("Keybind Settings", "Enable or disable keybinds for some options.");
             MenuController.AddSubmenu(menu, keybindMenu);
             MenuController.BindMenuItem(menu, keybindMenu, keybindMenuBtn);
@@ -164,7 +164,7 @@ namespace vMenuClient.menus
             var cancelEntity = new MenuItem("Cancel", "Deletes current entity and cancels its placement");
             var confirmAndDuplicate = new MenuItem("Confirm Entity Position And Duplicate", "Stops placing entity and sets it at it current location and creates new one to place.");
 
-            var connectionSubmenu = Lm.GetMenu(new Menu(Game.Player.Name, "Connection Options"));
+            var connectionSubmenu = Lm.GetMenu(new Menu("~r~", "Connection Options"));
             var connectionSubmenuBtn = new MenuItem("Connection Options", "Server connection/game quit options.");
 
             var quitSession = new MenuItem("Quit Session", "Leaves you connected to the server, but quits the network session. ~r~Can not be used when you are the host.");
